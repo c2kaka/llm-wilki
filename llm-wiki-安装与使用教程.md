@@ -8,20 +8,27 @@
 
 - [一、工作原理](#一工作原理)
 - [二、前置条件](#二前置条件)
-- [三、安装插件](#三安装插件)
-- [四、验证安装](#四验证安装)
-- [五、核心概念](#五核心概念)
-- [六、操作指南](#六操作指南)
-  - [6.1 init — 创建新 Wiki](#61-init--创建新-wiki)
-  - [6.2 ingest — 摄入原始资料](#62-ingest--摄入原始资料)
-  - [6.3 compile — 编译为 Wiki 页面](#63-compile--编译为-wiki-页面)
-  - [6.4 query — 查询知识库](#64-query--查询知识库)
-  - [6.5 lint — 完整性检查](#65-lint--完整性检查)
-  - [6.6 remove — 删除 Wiki](#66-remove--删除-wiki)
-- [七、Obsidian 集成技巧](#七obsidian-集成技巧)
-- [八、进阶用法](#八进阶用法)
-- [九、常见问题排查](#九常见问题排查)
-- [十、完整工作流示例](#十完整工作流示例)
+- [三、将 Claude Code 与 Obsidian 结合使用](#三将-claude-code-与-obsidian-结合使用)
+  - [3.1 什么是 Claudian 插件](#31-什么是-claudian-插件)
+  - [3.2 安装 Claude Code CLI](#32-安装-claude-code-cli)
+  - [3.3 安装 Claudian 插件](#33-安装-claudian-插件)
+  - [3.4 配置与使用](#34-配置与使用)
+  - [3.5 核心功能速览](#35-核心功能速览)
+  - [3.6 常见问题](#36-常见问题)
+- [四、安装 LLM Wiki 插件](#四安装-llm-wiki-插件)
+- [五、验证安装](#五验证安装)
+- [六、核心概念](#六核心概念)
+- [七、操作指南](#七操作指南)
+  - [7.1 init — 创建新 Wiki](#71-init--创建新-wiki)
+  - [7.2 ingest — 摄入原始资料](#72-ingest--摄入原始资料)
+  - [7.3 compile — 编译为 Wiki 页面](#73-compile--编译为-wiki-页面)
+  - [7.4 query — 查询知识库](#74-query--查询知识库)
+  - [7.5 lint — 完整性检查](#75-lint--完整性检查)
+  - [7.6 remove — 删除 Wiki](#76-remove--删除-wiki)
+- [八、Obsidian 集成技巧](#八obsidian-集成技巧)
+- [九、进阶用法](#九进阶用法)
+- [十、常见问题排查](#十常见问题排查)
+- [十一、完整工作流示例](#十一完整工作流示例)
 
 ---
 
@@ -74,7 +81,163 @@ ls ~/ObsidianVault/03-Resources/
 
 ---
 
-## 三、安装插件
+## 三、将 Claude Code 与 Obsidian 结合使用
+
+LLM Wiki 依赖 Claude Code 运行，而要让 Claude Code 直接在 Obsidian 中工作，需要使用 **Claudian** 插件。Claudian 是连接 Claude Code 和 Obsidian 的桥梁——它把你的 vault 变成 Claude Code 的工作目录，让 AI 可以直接读写 vault 中的文件、执行搜索和 bash 命令。
+
+### 3.1 什么是 Claudian 插件
+
+[Claudian](https://github.com/YishenTu/claudian) 是一个 Obsidian 社区插件，由 Yishen Tu 开发。它将 Claude Code（以及其他 AI 编程代理如 Codex、Opencode）嵌入到 Obsidian vault 中。
+
+核心能力：
+- **Vault 即工作目录**：Claude Code 可以直接读写你 vault 中的任何文件
+- **内联编辑**：选中文字后用快捷键直接让 AI 修改，带逐词差异预览
+- **多标签对话**：支持多个聊天标签页、对话历史、分支和恢复
+- **斜杠命令**：输入 `/` 调用可复用的提示模板或 Skills（如 llm-wiki）
+- **MCP 服务器**：通过 Model Context Protocol 连接外部工具
+- **Plan 模式**：`Shift+Tab` 切换，AI 先探索和设计再实现
+
+### 3.2 安装 Claude Code CLI
+
+Claudian 依赖 Claude Code CLI。安装方法：
+
+**macOS / Linux（原生安装，推荐）**：
+
+```bash
+# 使用官方安装脚本
+curl -fsSL https://claude.ai/install.sh | sh
+```
+
+**Windows**：
+
+从 [Claude Code 官网](https://code.claude.com/docs/en/overview) 下载安装包，或通过 npm 安装：
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+**验证安装**：
+
+```bash
+claude --version
+```
+
+> **认证**：首次运行 `claude` 需要登录 Anthropic 账号或配置 API Key。支持 Claude 订阅、API Key 或兼容的第三方提供商（如 [Openrouter](https://openrouter.ai/docs/guides/guides/claude-code-integration)）。
+
+### 3.3 安装 Claudian 插件
+
+有三种安装方式：
+
+#### 方式一：从 GitHub Release 安装（推荐）
+
+1. 前往 [最新 Release 页面](https://github.com/YishenTu/claudian/releases/latest)
+2. 下载 `main.js`、`manifest.json` 和 `styles.css` 三个文件
+3. 在你的 vault 中创建插件目录：
+
+```
+<你的vault路径>/.obsidian/plugins/claudian/
+```
+
+4. 将下载的三个文件复制到 `claudian` 文件夹中
+5. 在 Obsidian 中启用插件：
+   - 设置 → 第三方插件 → 找到 "Claudian" → 开启
+
+#### 方式二：使用 BRAT 安装（支持自动更新）
+
+1. 从 Obsidian 社区插件市场安装 [BRAT](https://github.com/TfTHacker/obsidian42-brat)
+2. 在设置中启用 BRAT
+3. 打开 BRAT 设置 → 点击 "Add Beta plugin"
+4. 输入仓库地址：`https://github.com/YishenTu/claudian`
+5. 点击 "Add Plugin"，BRAT 会自动安装
+6. 在设置 → 第三方插件中启用 "Claudian"
+
+#### 方式三：从源码构建（开发者）
+
+```bash
+cd <你的vault路径>/.obsidian/plugins
+git clone https://github.com/YishenTu/claudian.git
+cd claudian
+npm install
+npm run build
+```
+
+然后在 Obsidian 中启用插件。
+
+### 3.4 配置与使用
+
+安装完成后，点击左侧边栏的 Claudian 图标或通过命令面板打开聊天面板。
+
+**基本使用**：
+
+1. **打开聊天**：点击侧边栏的 Claudian 图标，或使用命令面板搜索 "Claudian"
+2. **选择模型**：在聊天面板顶部选择模型（如 haiku、sonnet、opus）
+3. **开始对话**：直接输入消息，Claude 会以你的 vault 为工作目录执行操作
+4. **内联编辑**：在笔记中选中文字 → 按快捷键 → AI 直接修改，带差异预览
+5. **使用斜杠命令**：输入 `/` 查看可用的 Skills 和命令模板
+
+**权限模式**（Settings → Claudian → Permission mode）：
+
+| 模式 | 说明 |
+|------|------|
+| `yolo` | 自动批准所有操作（适合信任 AI 的场景） |
+| `safe` | 每次文件修改都需要确认 |
+| `workspace-write` | 允许写入工作目录，其他操作需确认 |
+
+**连接第三方提供商**：
+
+如果你使用 Openrouter 或其他兼容提供商，在设置中配置环境变量即可，例如：
+
+```
+ANTHROPIC_API_KEY=your-key-here
+# 或使用 Openrouter
+OPENROUTER_API_KEY=your-key-here
+```
+
+### 3.5 核心功能速览
+
+| 功能 | 操作 |
+|------|------|
+| 打开聊天 | 侧边栏图标 / 命令面板 |
+| 内联编辑 | 选中文字 + 快捷键 |
+| 斜杠命令 | 输入 `/` 调用模板或 Skills |
+| `@mention` | 输入 `@` 引用 vault 文件、子代理、MCP 服务器 |
+| `#` 指令模式 | 输入 `#` 添加自定义指令 |
+| Plan 模式 | `Shift+Tab` 切换 |
+| 多标签 | 聊天面板支持多个标签页 |
+| 对话管理 | 历史、分支、恢复、压缩 |
+
+### 3.6 常见问题
+
+**问题：Claude CLI not found（`spawn claude ENOENT`）**
+
+这通常发生在使用 Node 版本管理器（nvm、fnm、volta）时。
+
+解决方法：先在设置中留空 CLI 路径让 Claudian 自动检测。如果失败，手动查找路径并设置：
+
+| 平台 | 查找命令 | 示例路径 |
+|------|----------|----------|
+| macOS/Linux | `which claude` | `/Users/you/.volta/bin/claude` |
+| Windows（原生安装） | `where.exe claude` | `C:\Users\you\AppData\Local\Claude\claude.exe` |
+| Windows（npm 安装） | `npm root -g` | `{root}\@anthropic-ai\claude-code\cli-wrapper.cjs` |
+
+在 Settings → Advanced → Claude CLI path 中设置路径。
+
+> **Windows 注意**：避免使用 `.cmd` 和 `.ps1` 包装器。原生安装用 `claude.exe`，包管理器安装用 `cli-wrapper.cjs`。
+
+**问题：npm 安装的 CLI 和 Node.js 不在同一目录**
+
+```bash
+dirname $(which claude)
+dirname $(which node)
+```
+
+如果路径不同，GUI 应用（如 Obsidian）可能找不到 Node.js。解决方案：
+1. 使用原生二进制安装（推荐）
+2. 在 Settings → Environment 中添加 Node.js 路径：`PATH=/path/to/node/bin`
+
+---
+
+## 四、安装 LLM Wiki 插件
 
 ### 方式一：从 Claude Code marketplace 安装（推荐）
 
@@ -117,7 +280,7 @@ ls ~/.claude/plugins/data/llm-wiki/node_modules/.bin/marp
 
 ---
 
-## 四、验证安装
+## 五、验证安装
 
 在 Claude Code 会话中输入：
 
@@ -133,9 +296,9 @@ init <name> | ingest <path|url> | compile [<path>] | query <question> | lint | r
 
 ---
 
-## 五、核心概念
+## 六、核心概念
 
-### 5.1 目录结构
+### 6.1 目录结构
 
 每个 wiki 位于 `~/ObsidianVault/03-Resources/<名称>/` 下：
 
@@ -161,7 +324,7 @@ init <name> | ingest <path|url> | compile [<path>] | query <question> | lint | r
 - `wiki/` 由 LLM 管理——你有完整写入权限
 - `log.md` 只能追加——永远不编辑已有条目
 
-### 5.2 活动 Wiki 检测
+### 6.2 活动 Wiki 检测
 
 运行任何操作时，插件从当前工作目录向上查找同时包含 `CLAUDE.md` 和 `wiki/` 子目录的文件夹。第一个匹配即为活动 wiki。
 
@@ -169,7 +332,7 @@ init <name> | ingest <path|url> | compile [<path>] | query <question> | lint | r
 - `cd` 到 wiki 根目录后运行命令（推荐）
 - 在任意位置运行，让插件自动检测或提示选择
 
-### 5.3 CLAUDE.md — Wiki 的 Schema
+### 6.3 CLAUDE.md — Wiki 的 Schema
 
 `CLAUDE.md` 是你与 LLM 之间的契约，定义了：
 
@@ -180,7 +343,7 @@ init <name> | ingest <path|url> | compile [<path>] | query <question> | lint | r
 
 **Schema 会随 wiki 共同演进。** 如果你想添加新的实体类型或修改约定，编辑 `CLAUDE.md`，LLM 会在下次操作时遵循新规则。
 
-### 5.4 实体类型
+### 6.4 实体类型
 
 三种页面类型，各有标准化的 frontmatter：
 
@@ -244,13 +407,13 @@ source-url: https://...
 - [[人物或概念]]
 ```
 
-### 5.5 Wikilinks 与复合增长
+### 6.5 Wikilinks 与复合增长
 
 每个页面通过 `[[wikilinks]]` 链接到相关页面。每次编译后，插件运行**反向链接审计**：在现有页面中搜索新建页面标题的出现位置，自动补充缺失的 wikilinks。
 
 **复合增长效应**：当查询 wiki 时，LLM 会跟随 wikilinks 向下展开一层以收集上下文。一个良好链接的 wiki 能发现任何单一资料都不包含的关联。
 
-### 5.6 qmd 搜索引擎（可选）
+### 6.6 qmd 搜索引擎（可选）
 
 qmd 提供混合搜索（BM25 关键词 + 向量语义搜索）。对于小型 wiki（约 50 页以下），直接读取 `index.md` 足够快。对于更大的 wiki，qmd 是高效查询的关键。
 
@@ -258,9 +421,9 @@ qmd 提供混合搜索（BM25 关键词 + 向量语义搜索）。对于小型 w
 
 ---
 
-## 六、操作指南
+## 七、操作指南
 
-### 6.1 init — 创建新 Wiki
+### 7.1 init — 创建新 Wiki
 
 **命令**：
 
@@ -296,7 +459,7 @@ cat ~/ObsidianVault/03-Resources/<名称>/wiki/index.md
 # 应看到空的目录模板
 ```
 
-### 6.2 ingest — 摄入原始资料
+### 7.2 ingest — 摄入原始资料
 
 **命令**：
 
@@ -337,7 +500,7 @@ compiled: false
 
 > **注意**：ingest **不会**创建 wiki 页面，只是将原始资料存入仓库。需要用 `compile` 来生成 wiki 页面。
 
-### 6.3 compile — 编译为 Wiki 页面
+### 7.3 compile — 编译为 Wiki 页面
 
 **命令**：
 
@@ -371,7 +534,7 @@ compiled: false
 
 > 一个源文件通常会涉及 5-15 个页面的创建或更新，这是正常的。
 
-### 6.4 query — 查询知识库
+### 7.4 query — 查询知识库
 
 **命令**：
 
@@ -404,7 +567,7 @@ compiled: false
 
 > 交换子（Commutator）写作 **A B A⁻¹ B⁻¹**，是[[group-theory]]中的核心概念。在[[rubiks-cube]]中，交换子可以实现"只改变特定块而不影响其他块"的效果。最基础的原子动作是 R U R' U'，详见 [[commutator]]。
 
-### 6.5 lint — 完整性检查
+### 7.5 lint — 完整性检查
 
 **命令**：
 
@@ -435,7 +598,7 @@ compiled: false
 6. 写入检查报告到 `outputs/reports/YYYY-MM-DD-lint.md`
 7. 追加到 `log.md`，Git commit
 
-### 6.6 remove — 删除 Wiki
+### 7.6 remove — 删除 Wiki
 
 **命令**：
 
@@ -453,9 +616,9 @@ compiled: false
 
 ---
 
-## 七、Obsidian 集成技巧
+## 八、Obsidian 集成技巧
 
-### 7.1 Web Clipper 浏览器插件
+### 8.1 Web Clipper 浏览器插件
 
 安装 [Obsidian Web Clipper](https://obsidian.md/clipper) 浏览器扩展后，配置：
 
@@ -468,7 +631,7 @@ compiled: false
 /llm-wiki:wiki ingest raw/articles/<剪藏文件名>.md
 ```
 
-### 7.2 图谱视图作为可视化检查
+### 8.2 图谱视图作为可视化检查
 
 在 Obsidian 中按 `Ctrl/Cmd+G` 打开图谱视图：
 
@@ -476,7 +639,7 @@ compiled: false
 - **密集连接的节点群** = 最强的知识领域
 - **集群之间的细桥** = 新概念页面的候选位置
 
-### 7.3 Dataview 动态查询
+### 8.3 Dataview 动态查询
 
 在任意笔记中添加以下代码块来查询 wiki：
 
@@ -510,7 +673,7 @@ LIMIT 10
 ```
 ````
 
-### 7.4 Marp 幻灯片导出
+### 8.4 Marp 幻灯片导出
 
 任何 wiki 页面都可以导出为幻灯片。在 frontmatter 中添加 `marp: true`，然后运行：
 
@@ -520,9 +683,9 @@ LIMIT 10
 
 ---
 
-## 八、进阶用法
+## 九、进阶用法
 
-### 8.1 多个 Wiki
+### 9.1 多个 Wiki
 
 每个主题在 `03-Resources/` 下有独立目录。按需创建：
 
@@ -534,7 +697,7 @@ LIMIT 10
 
 活动 wiki 检测根据当前工作目录自动选择。Wiki 之间不共享页面。
 
-### 8.2 大型 Wiki（200+ 页面）
+### 9.2 大型 Wiki（200+ 页面）
 
 此时直接读取 `index.md` 会变慢，qmd 的混合搜索必不可少。可以将 `index.md` 按领域分区，每节保持在 50 条以内。
 
@@ -544,7 +707,7 @@ LIMIT 10
 ~/.claude/plugins/data/llm-wiki/node_modules/.bin/qmd collection list
 ```
 
-### 8.3 矛盾处理
+### 9.3 矛盾处理
 
 当 LLM 发现跨资料的冲突信息时，会在页面中插入标记：
 
@@ -555,7 +718,7 @@ LIMIT 10
 
 lint 会在报告中汇总所有 `[!WARNING]` 标记。阅读两个来源后更新页面即可解决。
 
-### 8.4 查询答案的晋升机制
+### 9.4 查询答案的晋升机制
 
 查询工作流有两个归档步骤：
 
@@ -566,7 +729,7 @@ lint 会在报告中汇总所有 `[!WARNING]` 标记。阅读两个来源后更�
 
 ---
 
-## 九、常见问题排查
+## 十、常见问题排查
 
 | 问题 | 原因 | 解决方法 |
 |------|------|----------|
@@ -583,7 +746,7 @@ lint 会在报告中汇总所有 `[!WARNING]` 标记。阅读两个来源后更�
 
 ---
 
-## 十、完整工作流示例
+## 十一、完整工作流示例
 
 以下是一个从零开始的完整工作流示例：
 
