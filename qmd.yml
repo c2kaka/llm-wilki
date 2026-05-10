@@ -1,0 +1,4 @@
+collections:
+  llm-wiki:
+    path: ./wiki
+    pattern: "**/*.md"
