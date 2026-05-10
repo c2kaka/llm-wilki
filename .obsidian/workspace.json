@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "wiki/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "index"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "wiki/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "CLAUDE 的反向链接列表"
+              "title": "index 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "wiki/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "CLAUDE 的出链列表"
+              "title": "index 的出链列表"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "wiki/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CLAUDE 的大纲"
+              "title": "index 的大纲"
             }
           },
           {
@@ -196,12 +196,26 @@
   },
   "active": "ed7ece0ebf0c24e6",
   "lastOpenFiles": [
-    "log.md",
+    "wiki/llm-wiki.md",
     "wiki/index.md",
-    "qmd.yml",
-    "CLAUDE.md",
-    "raw/如何不背公式解开魔方：小学生也能看懂.md",
+    "wiki/llm-wiki-plugin.md",
+    "wiki/qmd.md",
+    "wiki/philo-li.md",
+    "wiki/obsidian.md",
+    "wiki/cfop.md",
+    "wiki/claude-code.md",
+    "wiki/commutator.md",
+    "wiki/speedsolving.md",
+    "wiki/ernoe-rubik.md",
+    "wiki/group-theory.md",
+    "wiki/solve-rubiks-cube-without-formulas.md",
+    "wiki/rubiks-cube.md",
+    "wiki/roux-method.md",
     "raw/articles/如何不背公式解开魔方：小学生也能看懂.md",
+    "CLAUDE.md",
+    "log.md",
+    "qmd.yml",
+    "raw/如何不背公式解开魔方：小学生也能看懂.md",
     "raw/articles/ekadetovllm-wiki LLM Wiki — Claude Code plugin for persistent, compounding knowledge bases in Obsidian.md",
     "outputs/reports",
     "outputs",
@@ -218,19 +232,6 @@
     "_temp_claudian/node_modules/@anthropic-ai/sdk/src/_vendor/partial-json-parser/README.md",
     "_temp_claudian/node_modules/@anthropic-ai/sdk/src/internal/README.md",
     "_temp_claudian/node_modules/@anthropic-ai/sdk/src/core/README.md",
-    "_temp_claudian/node_modules/@bcoe/v8-coverage/dist/lib/README.md",
-    "_temp_claudian/node_modules/@bcoe/v8-coverage/dist/lib/LICENSE.md",
-    "_temp_claudian/node_modules/@bcoe/v8-coverage/dist/lib/CHANGELOG.md",
-    "_temp_claudian/node_modules/@anthropic-ai/claude-agent-sdk/README.md",
-    "_temp_claudian/node_modules/@anthropic-ai/claude-agent-sdk/LICENSE.md",
-    "_temp_claudian/node_modules/@anthropic-ai/sdk/CHANGELOG.md",
-    "_temp_claudian/node_modules/@babel/plugin-syntax-bigint/README.md",
-    "_temp_claudian/node_modules/@jest/schemas/README.md",
-    "_temp_claudian/node_modules/@sinonjs/commons/lib/prototypes/README.md",
-    "_temp_claudian/node_modules/@sinonjs/fake-timers/README.md",
-    "_temp_claudian/node_modules/@types/istanbul-lib-report/README.md",
-    "_temp_claudian/node_modules/@types/istanbul-reports/README.md",
-    "_temp_claudian/node_modules/@typescript-eslint/scope-manager/README.md",
     "_temp_claudian/Preview.png"
   ]
 }
