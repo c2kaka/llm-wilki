@@ -1,11 +1,14 @@
 {
   "id": "conv-1778382358867-m6ebqf89a",
   "providerId": "claude",
-  "title": "I'll help you generate a title for this convers...",
+  "title": "I'll help you answer this question about how be...",
   "titleGenerationStatus": "success",
   "createdAt": 1778382358868,
-  "updatedAt": 1778382365401,
-  "lastResponseAt": 1778382360528,
+  "updatedAt": 1778383849309,
+  "lastResponseAt": 1778383849309,
   "sessionId": null,
-  "providerState": {}
+  "providerState": {},
+  "externalContextPaths": [
+    "D:\\llm-wiki"
+  ]
 }

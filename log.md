@@ -10,3 +10,6 @@ Initialized llm-wiki knowledge base.
 
 ## [2026-05-10] compile | 2 sources → 14 pages
 Compiled 如何不背公式解开魔方 and LLM Wiki plugin. Created 2 source-summaries, 8 concept pages, 2 person pages, 2 tool pages. Updated index.
+
+## [2026-05-10] query | how-to-learn-rubiks-cube-quickly
+Answered question. Referenced 7 pages. Filed to queries/how-to-learn-rubiks-cube-quickly.md.
