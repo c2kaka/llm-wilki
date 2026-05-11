@@ -1,12 +1,11 @@
 {
   "id": "conv-1778383807706-dn99dv0xj",
   "providerId": "claude",
-  "title": "你好！What would you like to work on with your LLM...",
-  "titleGenerationStatus": "success",
+  "title": "你好",
+  "titleGenerationStatus": "pending",
   "createdAt": 1778383807706,
-  "updatedAt": 1778383810686,
-  "lastResponseAt": 1778383809315,
+  "updatedAt": 1778466728110,
+  "lastResponseAt": 1778385409803,
   "sessionId": null,
-  "providerState": {},
-  "currentNote": "wiki/claude-code.md"
+  "currentNote": "未命名.canvas"
 }

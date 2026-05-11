@@ -24,9 +24,7 @@
     "claude": {
       "safeMode": "acceptEdits",
       "cliPath": "",
-      "cliPathsByHost": {
-        "DESKTOP-DL3WPPL": "C:\\Users\\Admin\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\cli.js"
-      },
+      "cliPathsByHost": {},
       "loadUserSettings": true,
       "enableChrome": false,
       "enableBangBash": false,
