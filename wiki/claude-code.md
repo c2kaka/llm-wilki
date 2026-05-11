@@ -20,6 +20,10 @@ Claude Code 支持通过 `claude plugin install` 安装社区插件，插件可�
 ## See Also
 - [[llm-wiki]]
 - [[obsidian]]
+- [[agent-harness]]
+- [[mcp]]
+- [[context-engineering]]
 
 ## Counter-Arguments and Gaps
 - 未涉及 Claude Code 的具体 API 限制和成本模型
+- 发布后 6 个月使用量增长 70 倍，具体使用场景和限制有待补充
