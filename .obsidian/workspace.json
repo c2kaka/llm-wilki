@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "8b26ce559f34cccd",
+        "id": "29a2407ba74f702b",
         "type": "split",
         "children": [
           {
             "id": "cf48445d14837520",
             "type": "tabs",
-            "dimension": 60.560344827586206,
+            "dimension": 70.56737588652483,
             "children": [
               {
                 "id": "798c4dd23d31088a",
@@ -18,38 +18,40 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "raw/研读几十个热门 Skills 之后，我总结出了这十个写好 Skill 的套路.md",
+                    "file": "raw/AI Agent develop taste gap.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "研读几十个热门 Skills 之后，我总结出了这十个写好 Skill 的套路"
+                  "title": "AI Agent develop taste gap"
                 }
               }
             ]
           },
           {
-            "id": "dc951c9733d1d40b",
+            "id": "545172ddceeb1a14",
             "type": "tabs",
-            "dimension": 39.439655172413794,
+            "dimension": 29.43262411347518,
             "children": [
               {
-                "id": "95d5fa3bfa018502",
+                "id": "cc5ccb968abb0f1b",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
                   "type": "terminal:terminal",
                   "state": {
                     "terminal:terminal": {
-                      "cwd": "D:\\llm-wiki",
+                      "cwd": "/Users/ouyangfan/llm-wilki",
                       "focus": false,
                       "profile": {
-                        "args": [],
-                        "executable": "C:\\Windows\\System32\\cmd.exe",
+                        "args": [
+                          "--login"
+                        ],
+                        "executable": "/bin/zsh",
                         "followTheme": true,
                         "name": "",
                         "platforms": {
-                          "win32": true
+                          "darwin": true
                         },
                         "pythonExecutable": "python3",
                         "restoreHistory": false,
@@ -70,44 +72,10 @@
                   },
                   "pinned": true,
                   "icon": "terminal",
-                  "title": "终端：选择 C:\\Windows\\System32\\conhost.exe - git  status"
-                }
-              },
-              {
-                "id": "2f536ccfac0337a9",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "terminal:terminal",
-                  "state": {
-                    "terminal:terminal": {
-                      "cwd": "D:\\llm-wiki",
-                      "focus": false,
-                      "profile": {
-                        "followTheme": true,
-                        "name": "",
-                        "restoreHistory": false,
-                        "rightClickAction": "copyPaste",
-                        "successExitCodes": [
-                          "0",
-                          "SIGINT",
-                          "SIGTERM"
-                        ],
-                        "terminalOptions": {
-                          "documentOverride": null
-                        },
-                        "type": "developerConsole"
-                      },
-                      "serial": null
-                    }
-                  },
-                  "pinned": true,
-                  "icon": "terminal",
-                  "title": "终端：开发者控制台"
+                  "title": "终端：ouyangfan@ouyangfandeMacBook-Pro:~/llm-wilki"
                 }
               }
-            ],
-            "currentTab": 1
+            ]
           }
         ],
         "direction": "horizontal"
@@ -268,7 +236,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 719.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -279,14 +248,19 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "terminal:Open terminal": false,
       "obsidian42-brat:BRAT": false,
       "opencode-obsidian:OpenCode": false
     }
   },
-  "active": "2f536ccfac0337a9",
+  "active": "cc5ccb968abb0f1b",
   "lastOpenFiles": [
+    "raw/AI Agent develop taste gap.md",
+    "raw/用“AI产品的六个层次”，分类AI Architect学员项目，结果如何？.md",
+    "raw/Taste是你感受quality的能力，是可以提高的.md",
+    "raw/Agent 系统正在重新走一遍 OS 和 Cloud Runtime 的老路.md",
+    "raw/AI 时代到底该怎么管一个工程团队.md",
     "raw/研读几十个热门 Skills 之后，我总结出了这十个写好 Skill 的套路.md",
     "wiki/indigo-live-0427-recalibration.md",
     "wiki/orchestration-loop.md",
@@ -309,11 +283,6 @@
     "raw/软件基本功没死，它在 AI 时代变得更值钱了.md",
     "llm-wiki-安装与使用教程.md",
     "wiki/queries/how-to-learn-rubiks-cube-quickly.md",
-    "wiki/claude-code.md",
-    "wiki/commutator.md",
-    "wiki/ernoe-rubik.md",
-    "wiki/group-theory.md",
-    "wiki/index.md",
     "qmd.yml",
     "outputs/reports",
     "outputs",
