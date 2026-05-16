@@ -10,6 +10,7 @@
           {
             "id": "c87946776ad78b77",
             "type": "tabs",
+            "dimension": 85.63218390804597,
             "children": [
               {
                 "id": "04a4502a6b11843b",
@@ -17,12 +18,12 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "raw/Exercise/心肺训练.md",
+                    "file": "raw/AI Agent/从带团队到管 AI Coding，方法其实是相通的.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "心肺训练"
+                  "title": "从带团队到管 AI Coding，方法其实是相通的"
                 }
               }
             ]
@@ -30,6 +31,7 @@
           {
             "id": "fe615c313c9ed12b",
             "type": "tabs",
+            "dimension": 14.367816091954023,
             "children": [
               {
                 "id": "3394cbbbfd704717",
@@ -147,6 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "raw/AI Agent/从带团队到管 AI Coding，方法其实是相通的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +159,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "从带团队到管 AI Coding，方法其实是相通的 的反向链接列表"
             }
           },
           {
@@ -165,11 +168,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "raw/AI Agent/从带团队到管 AI Coding，方法其实是相通的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "从带团队到管 AI Coding，方法其实是相通的 的出链列表"
             }
           },
           {
@@ -207,12 +211,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "raw/AI Agent/从带团队到管 AI Coding，方法其实是相通的.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "从带团队到管 AI Coding，方法其实是相通的 的大纲"
             }
           }
         ]
@@ -237,8 +242,9 @@
       "opencode-obsidian:OpenCode": false
     }
   },
-  "active": "3394cbbbfd704717",
+  "active": "35f9462a41d66236",
   "lastOpenFiles": [
+    "raw/AI Agent/从带团队到管 AI Coding，方法其实是相通的.md",
     "raw/Exercise/心肺训练.md",
     "raw/AI Agent/ai-agent-design.md",
     "raw/ai-agent-design.md",
