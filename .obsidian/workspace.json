@@ -1,98 +1,41 @@
 {
   "main": {
-    "id": "a4fe36ede713264a",
+    "id": "c23d382a3252713b",
     "type": "split",
     "children": [
       {
-        "id": "29a2407ba74f702b",
-        "type": "split",
+        "id": "c87946776ad78b77",
+        "type": "tabs",
         "children": [
           {
-            "id": "cf48445d14837520",
-            "type": "tabs",
-            "dimension": 70.56737588652483,
-            "children": [
-              {
-                "id": "798c4dd23d31088a",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "raw/AI Agent develop taste gap.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "AI Agent develop taste gap"
-                }
-              }
-            ]
-          },
-          {
-            "id": "545172ddceeb1a14",
-            "type": "tabs",
-            "dimension": 29.43262411347518,
-            "children": [
-              {
-                "id": "cc5ccb968abb0f1b",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "terminal:terminal",
-                  "state": {
-                    "terminal:terminal": {
-                      "cwd": "/Users/ouyangfan/llm-wilki",
-                      "focus": false,
-                      "profile": {
-                        "args": [
-                          "--login"
-                        ],
-                        "executable": "/bin/zsh",
-                        "followTheme": true,
-                        "name": "",
-                        "platforms": {
-                          "darwin": true
-                        },
-                        "pythonExecutable": "python3",
-                        "restoreHistory": false,
-                        "rightClickAction": "copyPaste",
-                        "successExitCodes": [
-                          "0",
-                          "SIGINT",
-                          "SIGTERM"
-                        ],
-                        "terminalOptions": {
-                          "documentOverride": null
-                        },
-                        "type": "integrated",
-                        "useWin32Conhost": true
-                      },
-                      "serial": null
-                    }
-                  },
-                  "pinned": true,
-                  "icon": "terminal",
-                  "title": "终端：ouyangfan@ouyangfandeMacBook-Pro:~/llm-wilki"
-                }
-              }
-            ]
+            "id": "04a4502a6b11843b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/Exercise/心肺训练.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "心肺训练"
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "170f567e0fe313bb",
+    "id": "3bc6f314ce82e83c",
     "type": "split",
     "children": [
       {
-        "id": "2bf85a4917e596ab",
+        "id": "2e800367ba111e77",
         "type": "tabs",
         "children": [
           {
-            "id": "c4d7967754537dc1",
+            "id": "35f9462a41d66236",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -105,7 +48,7 @@
             }
           },
           {
-            "id": "ca77cf2b437eac57",
+            "id": "e851c31d6e08aa4b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -122,7 +65,7 @@
             }
           },
           {
-            "id": "5a88db98e05f344d",
+            "id": "afc1e48aae3935f3",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -135,23 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 886.5
   },
   "right": {
-    "id": "20e8cb9d64579776",
+    "id": "9ac50b4d9e1198c9",
     "type": "split",
     "children": [
       {
-        "id": "3f61983f4790f228",
+        "id": "c01f81626b1a0195",
         "type": "tabs",
         "children": [
           {
-            "id": "70541a026942efc9",
+            "id": "3cbb9c41cd7fcc9f",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/claude-code.md",
+                "file": "raw/Exercise/心肺训练.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "claude-code 的反向链接列表"
+              "title": "心肺训练 的反向链接列表"
             }
           },
           {
-            "id": "6e6b3fa7cefb40ba",
+            "id": "ab7e7e4ae28509e9",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "wiki/claude-code.md",
+                "file": "raw/Exercise/心肺训练.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "claude-code 的出链列表"
+              "title": "心肺训练 的出链列表"
             }
           },
           {
-            "id": "c9a6c91bb876a650",
+            "id": "b6ad6d3d7b3856f6",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -194,7 +137,7 @@
             }
           },
           {
-            "id": "deba11d9919b9381",
+            "id": "229129f556b4f812",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -208,35 +151,25 @@
             }
           },
           {
-            "id": "93cb7063031847e1",
+            "id": "fe8f78aaee29d10c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "raw/Exercise/心肺训练.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
-            }
-          },
-          {
-            "id": "f4200a3b4cc34bfb",
-            "type": "leaf",
-            "state": {
-              "type": "opencode-view",
-              "state": {},
-              "icon": "opencode-logo",
-              "title": "OpenCode"
+              "title": "心肺训练 的大纲"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
@@ -248,51 +181,23 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
       "terminal:Open terminal": false,
       "obsidian42-brat:BRAT": false,
       "opencode-obsidian:OpenCode": false
     }
   },
-  "active": "cc5ccb968abb0f1b",
+  "active": "04a4502a6b11843b",
   "lastOpenFiles": [
-    "raw/AI Agent develop taste gap.md",
-    "raw/用“AI产品的六个层次”，分类AI Architect学员项目，结果如何？.md",
-    "raw/Taste是你感受quality的能力，是可以提高的.md",
-    "raw/Agent 系统正在重新走一遍 OS 和 Cloud Runtime 的老路.md",
-    "raw/AI 时代到底该怎么管一个工程团队.md",
-    "raw/研读几十个热门 Skills 之后，我总结出了这十个写好 Skill 的套路.md",
-    "wiki/indigo-live-0427-recalibration.md",
-    "wiki/orchestration-loop.md",
-    "wiki/agent-harness.md",
-    "wiki/speedsolving.md",
-    "wiki/software-fundamentals-in-ai-era.md",
-    "wiki/tdd.md",
-    "wiki/mcp.md",
-    "wiki/context-engineering.md",
-    "wiki/vibe-coding.md",
-    "wiki/ubiquitous-language.md",
-    "wiki/design-concept.md",
-    "wiki/deep-module.md",
-    "wiki/matt-pocock.md",
-    "wiki/anatomy-of-agent-harness.md",
-    "CLAUDE.md",
-    "raw/在 AI 急速进化的此刻，我们要对齐什么？.md",
-    "raw/深度拆解：AI Agent Harness 的构造【译】.md",
-    "未命名.canvas",
-    "raw/软件基本功没死，它在 AI 时代变得更值钱了.md",
-    "llm-wiki-安装与使用教程.md",
-    "wiki/queries/how-to-learn-rubiks-cube-quickly.md",
-    "qmd.yml",
-    "outputs/reports",
-    "outputs",
-    "wiki/queries",
-    "wiki",
-    "raw/attachments",
-    "raw/articles",
-    "_temp_llm-wiki",
-    "_temp_llm-wiki.tar.gz",
-    "_temp_claudian/main.js",
-    "_temp_claudian/Preview.png"
+    "raw/Exercise/核心力量训练.md",
+    "raw/Exercise/心肺训练.md",
+    "raw/Exercise/程序员篮球核心力量训练方案.md",
+    "raw/AI Agent/软件基本功没死，它在 AI 时代变得更值钱了.md",
+    "raw/Exercise",
+    "raw/AI Agent/Harness 工程分享：我们怎么把 LLM Agent 的 prompt cache 命中率做到 90%+（附 4 家 Agent 横评数据）.md",
+    "raw/AI Agent",
+    "raw/AI Agent/AI产品的六个层次.md",
+    "raw/AI Agent/用“AI产品的六个层次”，分类AI Architect学员项目，结果如何？.md",
+    "raw/AI Agent/AI Agent develop taste gap.md"
   ]
 }
