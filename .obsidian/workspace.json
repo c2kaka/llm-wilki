@@ -72,8 +72,19 @@
                   "icon": "terminal",
                   "title": "终端：C:\\Windows\\System32\\conhost.exe"
                 }
+              },
+              {
+                "id": "0106a48c90388d24",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "新标签页"
+                }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "horizontal"
@@ -149,7 +160,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "raw/AI Agent/从带团队到管 AI Coding，方法其实是相通的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +169,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "从带团队到管 AI Coding，方法其实是相通的 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -168,12 +178,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "raw/AI Agent/从带团队到管 AI Coding，方法其实是相通的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "从带团队到管 AI Coding，方法其实是相通的 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -211,13 +220,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "raw/AI Agent/从带团队到管 AI Coding，方法其实是相通的.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "从带团队到管 AI Coding，方法其实是相通的 的大纲"
+              "title": "大纲"
             }
           }
         ]
@@ -242,9 +250,11 @@
       "opencode-obsidian:OpenCode": false
     }
   },
-  "active": "35f9462a41d66236",
+  "active": "0106a48c90388d24",
   "lastOpenFiles": [
     "raw/AI Agent/从带团队到管 AI Coding，方法其实是相通的.md",
+    "raw/AI Agent/planner-research.md",
+    "raw/AI Agent/deep-research-report.md.crdownload",
     "raw/Exercise/心肺训练.md",
     "raw/AI Agent/ai-agent-design.md",
     "raw/ai-agent-design.md",
