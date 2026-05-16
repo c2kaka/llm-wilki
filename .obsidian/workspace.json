@@ -4,24 +4,77 @@
     "type": "split",
     "children": [
       {
-        "id": "c87946776ad78b77",
-        "type": "tabs",
+        "id": "9a4eb33cad3f467a",
+        "type": "split",
         "children": [
           {
-            "id": "04a4502a6b11843b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/Exercise/心肺训练.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "心肺训练"
-            }
+            "id": "c87946776ad78b77",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "04a4502a6b11843b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "raw/Exercise/心肺训练.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "心肺训练"
+                }
+              }
+            ]
+          },
+          {
+            "id": "fe615c313c9ed12b",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3394cbbbfd704717",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "D:\\llm-wiki",
+                      "focus": false,
+                      "profile": {
+                        "args": [],
+                        "executable": "C:\\Windows\\System32\\cmd.exe",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "win32": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "终端：C:\\Windows\\System32\\conhost.exe"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -94,7 +147,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "raw/Exercise/心肺训练.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +156,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "心肺训练 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -113,12 +165,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "raw/Exercise/心肺训练.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "心肺训练 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -156,13 +207,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "raw/Exercise/心肺训练.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "心肺训练 的大纲"
+              "title": "大纲"
             }
           }
         ]
@@ -187,10 +237,16 @@
       "opencode-obsidian:OpenCode": false
     }
   },
-  "active": "04a4502a6b11843b",
+  "active": "3394cbbbfd704717",
   "lastOpenFiles": [
-    "raw/Exercise/核心力量训练.md",
     "raw/Exercise/心肺训练.md",
+    "raw/AI Agent/ai-agent-design.md",
+    "raw/ai-agent-design.md",
+    "raw/deep-research-report.md.crdownload",
+    "raw/Exercise/篮球核心力量训练.md",
+    "raw/Exercise/deep-research-report.md",
+    "raw/Exercise/deep-research-report.md.crdownload",
+    "raw/Exercise/核心力量训练.md",
     "raw/Exercise/程序员篮球核心力量训练方案.md",
     "raw/AI Agent/软件基本功没死，它在 AI 时代变得更值钱了.md",
     "raw/Exercise",
